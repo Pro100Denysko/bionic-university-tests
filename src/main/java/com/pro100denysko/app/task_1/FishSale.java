@@ -40,7 +40,7 @@ class FishSale {
         this.dateOfPurchase = dateOfPurchase;
         this.dateOfSale = dateOfSale;
 
-        SimpleDateFormat format = new SimpleDateFormat("MM.dd.yyyy");
+        SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
         int storeDays = 0;
         try {
             Date date1 = format.parse(dateOfPurchase);
@@ -56,6 +56,4 @@ class FishSale {
         }
         return storeDays;
     }
-
-
 }
