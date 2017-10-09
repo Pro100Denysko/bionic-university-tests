@@ -1,6 +1,6 @@
 package com.pro100denysko.app.task_3;
 
-public class Circle implements Figure {
+public  class Circle implements Figure {
 
     private int r;
 
