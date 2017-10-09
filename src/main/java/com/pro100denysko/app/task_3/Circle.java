@@ -1,6 +1,10 @@
 package com.pro100denysko.app.task_3;
 
-public  class Circle implements Figure {
+import lombok.Data;
+
+public
+@Data
+class Circle implements Figure {
 
     private int r;
 
@@ -9,6 +13,6 @@ public  class Circle implements Figure {
     }
 
     public double getSquare() {
-        return Math.PI*r*r;
+        return Math.PI * r * r;
     }
 }

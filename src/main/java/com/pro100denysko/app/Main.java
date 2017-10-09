@@ -1,7 +1,10 @@
-package com.pro100denysko.app.task_3;
+package com.pro100denysko.app;
 
 import com.pro100denysko.app.task_1.FishSale;
-import com.sun.xml.internal.bind.v2.TODO;
+import com.pro100denysko.app.task_3.Circle;
+import com.pro100denysko.app.task_3.Figure;
+import com.pro100denysko.app.task_3.Rectangle;
+import com.pro100denysko.app.task_3.Square;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -28,6 +31,8 @@ public class Main {
             generalSquare = +square;
         }
         System.out.println(generalSquare);
+
+
 
 
         ///////////////////////////////////
