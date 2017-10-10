@@ -1,11 +1,9 @@
 package com.pro100denysko.app;
 
 import com.pro100denysko.app.task_1.FishSale;
+import com.pro100denysko.app.task_1.FishUtil;
 import com.pro100denysko.app.task_2.*;
-import com.pro100denysko.app.task_3.Circle;
-import com.pro100denysko.app.task_3.Figure;
-import com.pro100denysko.app.task_3.Rectangle;
-import com.pro100denysko.app.task_3.Square;
+import com.pro100denysko.app.task_3.*;
 import com.pro100denysko.app.task_4.Age;
 
 import java.util.*;
@@ -26,16 +24,7 @@ public class Main {
         listOfFishes.add(new FishSale("Carp", 150.0, "6.11.2017", 250.0, "24.12.2017", 2, 2));
         listOfFishes.add(new FishSale("Trout", 400.0, "10.6.2017", 800.0, "15.6.2017", 4, 3));
 
-        Collections.sort(listOfFishes, new Comparator<FishSale>() {
-            @Override
-            public int compare(FishSale o1, FishSale o2) {
-                return o1.getNameOfFish().compareTo(o2.getNameOfFish());
-            }
-        });
-
-        for (int i = 0; i < listOfFishes.size(); i++) {
-            System.out.println(listOfFishes.get(i).getNameOfFish() + " income = " + listOfFishes.get(i).incomeStatement(listOfFishes.get(i)));
-        }
+        FishUtil.sort(listOfFishes);
         System.out.println();
 
 ///////////////////////////////////
@@ -70,18 +59,13 @@ public class Main {
         listOfFigures.add(new Square(3));
         listOfFigures.add(new Rectangle(4, 6));
         listOfFigures.add(new Circle(4));
-        double generalSquare = 0;
 
-        for (int i = 0; i < listOfFigures.size(); i++) {
-            double square = listOfFigures.get(i).getSquare();
-            generalSquare = +square;
-        }
-        System.out.println("General Square = " + generalSquare);
+        FigureUtil.generalSquare(listOfFigures);
         System.out.println();
 
 
         ///////////////////////////////////
-        // TODO Task 3
+        // TODO Task 4
 
         System.out.println("Task 4");
 
