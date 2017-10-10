@@ -6,8 +6,7 @@ import org.joda.time.Days;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Date;
-import java.util.Scanner;
+import java.util.*;
 
 public
 @Data
@@ -27,12 +26,11 @@ class Age {
             dateOfBirth = sc.nextLine();
 
         } catch (Exception ex) {
-            System.out.println(ex);
+            ex.printStackTrace();
         }
     }
 
     public void ageInDays() {
-
         try {
             Date date1 = format.parse(dateOfBirth);
             Date date2 = format.parse(localDate);
@@ -51,5 +49,27 @@ class Age {
     public void ageInMonths() {
         int ageInMonths = ageInDays / 31;
         System.out.println("Your age in months = " + ageInMonths);
+    }
+
+    public void dayOfWeekOfBirth() {
+        try {
+            Date date = format.parse(dateOfBirth);
+            DateTime dt = new DateTime(date);
+            int dayOfWeekOfBirth = dt.getDayOfWeek();
+
+            List<String> listOfDays = new ArrayList<>();
+            listOfDays.add("Monday");
+            listOfDays.add("Tuesday");
+            listOfDays.add("Wednesday");
+            listOfDays.add("Thursday");
+            listOfDays.add("Friday");
+            listOfDays.add("Saturday");
+            listOfDays.add("Sunday");
+
+            String dayOfWeek = listOfDays.get(dayOfWeekOfBirth - 1);
+            System.out.println("Your day of week ob birth is " + dayOfWeek);
+        } catch (Exception ex) {
+            ex.printStackTrace();
+        }
     }
 }

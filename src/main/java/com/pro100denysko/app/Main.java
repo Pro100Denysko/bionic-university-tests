@@ -66,6 +66,7 @@ public class Main {
         age.dateOfBirth();
         age.ageInDays();
         age.ageInMonths();
+        age.dayOfWeekOfBirth();
 
     }
 }
