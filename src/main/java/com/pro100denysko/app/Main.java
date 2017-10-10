@@ -1,6 +1,7 @@
 package com.pro100denysko.app;
 
 import com.pro100denysko.app.task_1.FishSale;
+import com.pro100denysko.app.task_2.*;
 import com.pro100denysko.app.task_3.Circle;
 import com.pro100denysko.app.task_3.Figure;
 import com.pro100denysko.app.task_3.Rectangle;
@@ -35,6 +36,28 @@ public class Main {
         for (int i = 0; i < listOfFishes.size(); i++) {
             System.out.println(listOfFishes.get(i).getNameOfFish() + " income = " + listOfFishes.get(i).incomeStatement(listOfFishes.get(i)));
         }
+        System.out.println();
+
+///////////////////////////////////
+        // TODO Task 2
+
+        System.out.println("Task 2");
+
+        List<Document> listOfDocuments = new ArrayList<>();
+        listOfDocuments.add(new Book("Harry Potter And The Deathly Hallows", "The huge snake emerged to climb slowly up Vol de mort’s chair.\n" +
+                "It rose, seemingly endlessly, and came to rest across Vol de mort’s\n" +
+                "shoulders: its neck the thickness of a man’s thigh; its eyes, with their\n" +
+                "vertical slits for pupils, unblinking. Vol de mort stroked the creature\n" +
+                "absently with long thin fi ngers, still looking at Lucius Malfoy", "J. K. Rowling", "Raincoast", "A"));
+        listOfDocuments.add(new Article("Harry Potter And The Deathly Hallows", "Rowling's genius is not just her total realisation of a fantasy world,\n" +
+                " but the quieter skill of creating characters that bounce off the page, real and flawed and brave and lovable",
+                "Alice Fordham", "The Times", 2010, 10));
+        listOfDocuments.add(new WikiArticle("Harry Potter And The Deathly Hallows",
+                "Rowling's genius is not just her total realisation of a fantasy world,\n" +
+                        " but the quieter skill of creating characters that bounce off the page, real and flawed and brave and lovable",
+                "https://en.wikipedia.org/wiki/Harry_Potter_and_the_Deathly_Hallows"));
+
+        DocumentUtil.findKeyWords(listOfDocuments);
         System.out.println();
 
 
