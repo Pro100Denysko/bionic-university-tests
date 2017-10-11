@@ -2,17 +2,16 @@ package com.pro100denysko.app.task_3;
 
 import lombok.Data;
 
-public
 @Data
-class Circle implements Figure {
+public class Circle implements Figure {
 
-    private int r;
+    private int radius;
 
-    public Circle(int r) {
-        this.r = r;
+    public Circle(int radius) {
+        this.radius = radius;
     }
 
     public double getSquare() {
-        return Math.PI * r * r;
+        return Math.PI * radius * radius;
     }
 }

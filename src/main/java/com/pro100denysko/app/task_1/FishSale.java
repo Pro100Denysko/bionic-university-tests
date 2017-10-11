@@ -1,5 +1,6 @@
 package com.pro100denysko.app.task_1;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 import org.joda.time.DateTime;
 import org.joda.time.Days;
@@ -8,9 +9,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public
 @Data
-class FishSale {
+@AllArgsConstructor
+public class FishSale {
 
     private String nameOfFish;
     private double priceOfPurchase;
@@ -20,18 +21,9 @@ class FishSale {
     private double saleWeight;
     private double overhead;
 
-    public FishSale(String nameOfFish, double priceOfPurchase, String dateOfPurchase, double priceOfSale, String dateOfSale, double saleWeight, double overhead) {
-        this.nameOfFish = nameOfFish;
-        this.priceOfPurchase = priceOfPurchase;
-        this.dateOfPurchase = dateOfPurchase;
-        this.priceOfSale = priceOfSale;
-        this.dateOfSale = dateOfSale;
-        this.saleWeight = saleWeight;
-        this.overhead = overhead;
-    }
-
     public double incomeStatement(FishSale fish) {
-        double income = (fish.getPriceOfSale() - fish.priceOfPurchase - fish.storeDays(fish.getDateOfPurchase(), fish.getDateOfSale()) * fish.getOverhead()) * fish.getSaleWeight();
+        double income = (fish.getPriceOfSale() - fish.priceOfPurchase - fish.storeDays(fish.getDateOfPurchase(), fish.getDateOfSale()) * fish.getOverhead())
+                * fish.getSaleWeight();
         return income;
     }
 

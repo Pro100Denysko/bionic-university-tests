@@ -1,16 +1,12 @@
 package com.pro100denysko.app.task_2;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
-public
 @Data
-class Document {
+@AllArgsConstructor
+public class Document {
 
     private String title;
     private String text;
-
-    public Document(String title, String text) {
-        this.title = title;
-        this.text = text;
-    }
 }

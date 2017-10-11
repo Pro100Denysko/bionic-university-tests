@@ -2,9 +2,8 @@ package com.pro100denysko.app.task_3;
 
 import lombok.Data;
 
-public
 @Data
-class Rectangle implements Figure {
+public class Rectangle implements Figure {
 
     private int a;
     private int b;

@@ -1,10 +1,10 @@
 package com.pro100denysko.app.task_2;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
-public
 @Data
-class Article extends Document {
+public class Article extends Document {
 
     private String autor_s;
     private String journalName;
