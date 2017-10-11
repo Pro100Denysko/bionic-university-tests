@@ -1,4 +1,4 @@
-package com.pro100denysko.app.task_5;
+package com.pro100denysko.app.task5;
 
 public class Calculator {
     interface IntegerMath {

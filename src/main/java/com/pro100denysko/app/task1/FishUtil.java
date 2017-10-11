@@ -1,4 +1,4 @@
-package com.pro100denysko.app.task_1;
+package com.pro100denysko.app.task1;
 
 import lombok.Data;
 

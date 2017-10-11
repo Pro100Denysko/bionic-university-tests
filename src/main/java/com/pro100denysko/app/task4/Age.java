@@ -1,4 +1,4 @@
-package com.pro100denysko.app.task_4;
+package com.pro100denysko.app.task4;
 
 import lombok.Data;
 import org.joda.time.DateTime;
