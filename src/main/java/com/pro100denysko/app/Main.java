@@ -1,34 +1,32 @@
 package com.pro100denysko.app;
 
-import com.pro100denysko.app.task_1.FishSale;
-import com.pro100denysko.app.task_1.FishUtil;
-import com.pro100denysko.app.task_2.*;
-import com.pro100denysko.app.task_3.*;
-import com.pro100denysko.app.task_4.Age;
+import com.pro100denysko.app.task1.FishSale;
+import com.pro100denysko.app.task1.FishUtil;
+import com.pro100denysko.app.task2.*;
+import com.pro100denysko.app.task3.*;
+import com.pro100denysko.app.task4.Age;
 
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
 
-
-        ///////////////////////////////////
-        // TODO Task 1
-
         System.out.println("Task 1");
         List<FishSale> listOfFishes = new ArrayList<>();
 
-        listOfFishes.add(new FishSale("Clown Fish", 200.0, "25.7.2017", 400.0, "30.7.2017", 2, 1.5));
-        listOfFishes.add(new FishSale("Clown Fish", 200.0, "25.7.2017", 400.0, "26.7.2017", 2.3, 1.5));
-        listOfFishes.add(new FishSale("Carp", 150.0, "6.11.2017", 250.0, "12.12.2017", 1.5, 2));
-        listOfFishes.add(new FishSale("Carp", 150.0, "6.11.2017", 250.0, "24.12.2017", 2, 2));
-        listOfFishes.add(new FishSale("Trout", 400.0, "10.6.2017", 800.0, "15.6.2017", 4, 3));
+        listOfFishes.add(new FishSale("Clown Fish", 200.0, "25.7.2017", 400.0, "30.7.2017", 2,
+                1.5));
+        listOfFishes.add(new FishSale("Clown Fish", 200.0, "25.7.2017", 400.0, "26.7.2017", 2.3,
+                1.5));
+        listOfFishes.add(new FishSale("Carp", 150.0, "6.11.2017", 250.0, "12.12.2017", 1.5,
+                2));
+        listOfFishes.add(new FishSale("Carp", 150.0, "6.11.2017", 250.0, "24.12.2017", 2,
+                2));
+        listOfFishes.add(new FishSale("Trout", 400.0, "10.6.2017", 800.0, "15.6.2017", 4,
+                3));
 
         FishUtil.sort(listOfFishes);
         System.out.println();
-
-///////////////////////////////////
-        // TODO Task 2
 
         System.out.println("Task 2");
 
@@ -49,10 +47,6 @@ public class Main {
         DocumentUtil.findKeyWords(listOfDocuments);
         System.out.println();
 
-
-        ///////////////////////////////////
-        // TODO Task 3
-
         System.out.println("Task 3");
         List<Figure> listOfFigures = new ArrayList<>();
 
@@ -63,17 +57,12 @@ public class Main {
         FigureUtil.generalSquare(listOfFigures);
         System.out.println();
 
-
-        ///////////////////////////////////
-        // TODO Task 4
-
         System.out.println("Task 4");
 
         Age age = new Age();
         age.dateOfBirth();
-        age.ageInDays();
-        age.ageInMonths();
-        age.dayOfWeekOfBirth();
-
+        System.out.println("Your age in days = " + age.ageInDays());
+        System.out.println("Your age in months = " + age.ageInMonths());
+        System.out.println("Your day of week ob birth is " + age.dayOfWeekOfBirth());
     }
 }

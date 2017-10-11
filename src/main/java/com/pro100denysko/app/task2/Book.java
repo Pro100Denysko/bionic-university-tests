@@ -1,10 +1,9 @@
-package com.pro100denysko.app.task_2;
+package com.pro100denysko.app.task2;
 
 import lombok.Data;
 
-public
 @Data
-class Book extends Document {
+public class Book extends Document {
 
     private String autor_s;
     private String publisher;

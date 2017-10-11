@@ -1,4 +1,4 @@
-package com.pro100denysko.app.task_4;
+package com.pro100denysko.app.task4;
 
 import lombok.Data;
 import org.joda.time.DateTime;
@@ -8,13 +8,11 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public
 @Data
-class Age {
+public class Age {
 
-    private String age;
-    String dateOfBirth;
-    int ageInDays = 0;
+    private String dateOfBirth;
+    private int ageInDays;
 
     String localDate = new SimpleDateFormat("dd.MM.yyyy").format(new Date());
     SimpleDateFormat format = new SimpleDateFormat("dd.MM.yyyy");
@@ -22,36 +20,34 @@ class Age {
     public void dateOfBirth() {
         try {
             Scanner sc = new Scanner(System.in);
-            System.out.println("Put your date of birth");
+            System.out.println("Put your date of birth in dd.MM.yyyy");
             dateOfBirth = sc.nextLine();
-
         } catch (Exception ex) {
             ex.printStackTrace();
         }
     }
 
-    public void ageInDays() {
+    public int ageInDays() {
         try {
             Date date1 = format.parse(dateOfBirth);
             Date date2 = format.parse(localDate);
-
             DateTime dt1 = new DateTime(date1);
             DateTime dt2 = new DateTime(date2);
 
             ageInDays = Days.daysBetween(dt1, dt2).getDays();
-            System.out.println("Your age in days = " + ageInDays);
         } catch (ParseException e) {
             e.printStackTrace();
         }
-
+        return ageInDays;
     }
 
-    public void ageInMonths() {
+    public int ageInMonths() {
         int ageInMonths = ageInDays / 31;
-        System.out.println("Your age in months = " + ageInMonths);
+        return ageInMonths;
     }
 
-    public void dayOfWeekOfBirth() {
+    public String dayOfWeekOfBirth() {
+        String dayOfWeek = new String();
         try {
             Date date = format.parse(dateOfBirth);
             DateTime dt = new DateTime(date);
@@ -66,10 +62,10 @@ class Age {
             listOfDays.add("Saturday");
             listOfDays.add("Sunday");
 
-            String dayOfWeek = listOfDays.get(dayOfWeekOfBirth - 1);
-            System.out.println("Your day of week ob birth is " + dayOfWeek);
+            dayOfWeek = listOfDays.get(dayOfWeekOfBirth - 1);
         } catch (Exception ex) {
             ex.printStackTrace();
         }
+        return dayOfWeek;
     }
 }

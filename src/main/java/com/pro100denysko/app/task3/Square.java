@@ -1,10 +1,9 @@
-package com.pro100denysko.app.task_3;
+package com.pro100denysko.app.task3;
 
 import lombok.Data;
 
-public
 @Data
-class Square implements Figure {
+public class Square implements Figure {
 
     private int a;
 

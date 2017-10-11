@@ -1,24 +1,20 @@
-package com.pro100denysko.app.task_3;
+package com.pro100denysko.app.task3;
 
 import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public
 @Data
-class FigureUtil {
+public class FigureUtil {
 
-    List<Figure> listOfFigures = new ArrayList<>();
+    private List<Figure> listOfFigures = new ArrayList<>();
 
     public static void generalSquare(List<Figure> listOfFigures) {
         try {
-
-
             double generalSquare = 0;
-
-            for (int i = 0; i < listOfFigures.size(); i++) {
-                double square = listOfFigures.get(i).getSquare();
+            for (Figure listOfFigure : listOfFigures) {
+                double square = listOfFigure.getSquare();
                 generalSquare = +square;
             }
             System.out.println("General Square = " + generalSquare);
@@ -26,5 +22,4 @@ class FigureUtil {
             ex.printStackTrace();
         }
     }
-
 }
